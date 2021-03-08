@@ -1,0 +1,128 @@
+.container {
+  text-align: center;
+  margin: 30px auto 5px auto;
+  padding: 20px;
+  max-width: 600px;
+  font-family: "Averia Libre", cursive;
+  color: white;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+  border: white solid 1px;
+  border-radius: 5px;
+}
+
+.search {
+  --bs-gutter-x: 0.5rem;
+}
+
+input {
+  display: inline;
+}
+
+.form-control {
+  border: 1px solid black;
+  padding: 0 auto;
+}
+
+.btn-primary {
+  background: white;
+  color: Black;
+  border-color: black;
+  transition: all 100ms ease-in-out;
+  padding: 0 auto;
+}
+
+.btn-primary:hover {
+  background: black;
+  color: white;
+  border-color: black;
+}
+
+#City {
+  padding-left: 8px;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 30px;
+}
+
+#units {
+  padding: 0;
+}
+a {
+  font-size: 25px;
+  text-align: right;
+  color: white;
+}
+a:hover {
+  color: black;
+}
+
+#units a {
+  text-decoration: none;
+}
+
+#temp {
+  font-size: 70px;
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.forecast {
+  border-top: white solid 1px;
+  border-bottom: white solid 1px;
+  padding: 15px;
+  margin-top: 23px;
+  font-size: 18px;
+}
+
+#description {
+  text-transform: capitalize;
+}
+
+.main.fa-cloud-sun-rain {
+  font-size: 80px;
+}
+
+.further-information {
+  text-align: left;
+}
+
+.further-information p {
+  margin: 0;
+}
+
+.forecast {
+  margin: 010px;
+}
+
+.forecast-days {
+  font-size: 20px;
+}
+
+.forecast-icons {
+  font-size: 35px;
+}
+
+.update {
+  text-align: right;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+footer {
+  color: grey;
+  text-align: center;
+  margin-top: 0px;
+  font-size: 15px;
+}

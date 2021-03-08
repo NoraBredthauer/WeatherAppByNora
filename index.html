@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/71944f6ac0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Averia+Libre:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather App by Nora</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather</h1>
+
+      <div class="row search">
+        <div class="col-8">
+          <form id="search-city">
+            <input
+              id="city-typed-in"
+              type="text"
+              class="form-control"
+              placeholder="Search city..."
+            />
+          </form>
+        </div>
+        <div class="col-2">
+          <form id="button-search">
+            <input class="btn btn-primary" type="submit" value="Search" />
+          </form>
+        </div>
+        <div class="col-1">
+          <form id="button-current">
+            <input class="btn btn-primary" type="button" value="Current" />
+          </form>
+        </div>
+      </div>
+
+      <p id="City"></p>
+
+      <div class="row main align-items-center justify-content-center">
+        <div class="col-3" temp>
+          <p id="temp"></p>
+        </div>
+        <div class="col-2" id="units">
+          <a href="#" id="celsius-link">°C</a> /
+          <a href="#" id="fahrenheit-link">F</a>
+        </div>
+        <div class="col-3">
+          <i class="fas fa-cloud-sun-rain main"></i>
+        </div>
+
+        <div class="col-4 further-information">
+          <p><span id="description"> </span></p>
+          <p>Humidity: <span id="humidity"></span>%</p>
+          <p>Feels like: <span id="feels-like"></span></p>
+        </div>
+      </div>
+
+      <div class="forecast">
+        <div class="row forecast-days">
+          <div class="col">Tomorrow</div>
+
+          <div class="col">Tuesday</div>
+
+          <div class="col">Wednesday</div>
+
+          <div class="col">Thursday</div>
+
+          <div class="col">Friday</div>
+        </div>
+
+        <div class="row forecast-icons">
+          <div class="col">
+            <i class="fas fa-cloud-sun-rain"></i>
+          </div>
+
+          <div class="col">
+            <i class="fas fa-cloud-sun-rain"></i>
+          </div>
+
+          <div class="col">
+            <i class="fas fa-cloud-sun-rain"></i>
+          </div>
+
+          <div class="col">
+            <i class="fas fa-cloud-sun-rain"></i>
+          </div>
+
+          <div class="col">
+            <i class="fas fa-cloud-sun-rain"></i>
+          </div>
+        </div>
+
+        <div class="row forecast-temp">
+          <div class="col">?°C/?°C</div>
+
+          <div class="col">?°C/?°C</div>
+
+          <div class="col">?°C/?°C</div>
+
+          <div class="col">?°C/?°C</div>
+
+          <div class="col">?°C/?°C</div>
+        </div>
+      </div>
+      <div class="row update">
+        <div class="col">
+          Last updated: <span id="current-time"> Day, Time </span>CET
+        </div>
+      </div>
+    </div>
+    <footer>Coded by Nora Bredthauer</footer>
+    <script src="src/script.js"></script>
+  </body>
+</html>
