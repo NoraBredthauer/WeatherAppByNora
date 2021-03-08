@@ -58,11 +58,13 @@ input {
 #units {
   padding: 0;
 }
-a {
+
+.unit-links {
   font-size: 25px;
   text-align: right;
   color: white;
 }
+
 a:hover {
   color: black;
 }
@@ -120,7 +122,8 @@ a:hover {
   font-size: 12px;
 }
 
-footer {
+footer,
+#github-link {
   color: grey;
   text-align: center;
   margin-top: 0px;
