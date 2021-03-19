@@ -12,9 +12,7 @@ function showTemp(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
-  console.log(response);
-}
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);}
 
 function search(city) {
   let apiKey = "d0f8d1f9fa465cea19969bac3ea3aac3";
