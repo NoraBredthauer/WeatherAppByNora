@@ -55,10 +55,6 @@ input {
   font-size: 30px;
 }
 
-#units {
-  padding: 0;
-}
-
 .unit-links {
   font-size: 25px;
   text-align: right;
@@ -74,21 +70,16 @@ a:hover {
 }
 
 #temp {
-  font-size: 70px;
+  font-size: 90px;
   margin-bottom: 0;
-  text-align: right;
-}
+  text-align: center;
+  display: inline;
+  }
 
 .forecast {
   border-top: white solid 1px;
   border-bottom: white solid 1px;
-  padding: 15px;
-  margin-top: 23px;
   font-size: 18px;
-}
-
-#description {
-  text-transform: capitalize;
 }
 
 .main.fa-cloud-sun-rain {
@@ -97,6 +88,7 @@ a:hover {
 
 .further-information {
   text-align: left;
+  text-transform: capitalize;
 }
 
 .further-information p {
@@ -104,7 +96,7 @@ a:hover {
 }
 
 .forecast {
-  margin: 010px;
+  margin: 10px;
 }
 
 .forecast-days {
