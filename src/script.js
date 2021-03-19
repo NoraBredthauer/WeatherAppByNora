@@ -31,8 +31,8 @@ function handleSubmit(event) {
   search(city);
 }
 
-let searchButton = document.querySelector("#button-search");
-searchButton.addEventListener("submit", handleSubmit);
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
 
 search("Nürnberg");
 
@@ -51,7 +51,7 @@ function callNavigator(event) {
   navigator.geolocation.getCurrentPosition(dataPosition);
 }
 
-let buttonCurrent = document.querySelector("#button-current");
+let buttonCurrent = document.querySelector("#current-button");
 buttonCurrent.addEventListener("click", callNavigator);
 
 // Links to Fahrenheit and Celsius
