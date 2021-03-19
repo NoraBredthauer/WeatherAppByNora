@@ -12,7 +12,11 @@ function showTemp(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);}
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  let iconID=response.data.weather[0].icon;
+  document.querySelector("#weather-icon").setAttribute("src", `http://openweathermap.org/img/wn/${iconID}@2x.png`)
+}
+
 
 function search(city) {
   let apiKey = "d0f8d1f9fa465cea19969bac3ea3aac3";
