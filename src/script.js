@@ -26,7 +26,7 @@ function search(city) {
 }
 
 function handleSubmit(event) {
-  event.preventDefault();
+    event.preventDefault();
   let city = document.querySelector("#city-typed-in").value;
   search(city);
 }

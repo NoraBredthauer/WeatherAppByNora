@@ -31,22 +31,20 @@
       <h1>Weather</h1>
 
       <div class="row search">
-        <div class="col-8">
-          <form id="search-city">
+        <div class="col-6">
+          <form>
             <input
               id="city-typed-in"
               type="text"
               class="form-control"
               placeholder="Search city..."
             />
+          </div>
+          <div class="col-2">
+              <input class="btn btn-primary" type="submit" value="Search" id="button-search"/>
           </form>
         </div>
         <div class="col-2">
-          <form id="button-search">
-            <input class="btn btn-primary" type="submit" value="Search" />
-          </form>
-        </div>
-        <div class="col-1">
           <form id="button-current">
             <input class="btn btn-primary" type="button" value="Current" />
           </form>
