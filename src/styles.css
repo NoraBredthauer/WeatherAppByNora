@@ -55,9 +55,8 @@ input {
   font-size: 30px;
 }
 
-
 a:hover {
-  color: black;
+  color: white;
 }
 
 #temp {
@@ -78,6 +77,10 @@ a:hover {
 }
 #celsius-link {
   text-decoration: none;
+}
+
+#fahrenheit-link {
+  color: blue;
 }
 
 .forecast {
