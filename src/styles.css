@@ -50,7 +50,7 @@ input {
 
 #City {
   padding-left: 8px;
-  margin: 20px auto;
+  margin: 20px auto 5px auto;
   text-align: left;
   font-size: 30px;
 }
