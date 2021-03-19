@@ -65,16 +65,21 @@ a:hover {
   color: black;
 }
 
-#celsius-link {
-  text-decoration: none;
-}
 
 #temp {
   font-size: 90px;
   margin-bottom: 0;
-  text-align: center;
   display: inline;
-  }
+}
+
+.unit-element {
+  position: relative; 
+  top: -41px;
+}
+
+#celsius-link {
+  text-decoration: none;
+}
 
 .forecast {
   border-top: white solid 1px;
@@ -84,10 +89,12 @@ a:hover {
 
 .main.fa-cloud-sun-rain {
   font-size: 80px;
+  padding-left: 30px;
 }
 
 .further-information {
   text-align: left;
+  padding-left: 110px;
   text-transform: capitalize;
 }
 
