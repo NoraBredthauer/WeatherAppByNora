@@ -55,10 +55,6 @@ input {
   font-size: 30px;
 }
 
-a:hover {
-  color: white;
-}
-
 #temp {
   font-size: 90px;
   margin-bottom: 0;
@@ -74,13 +70,18 @@ a:hover {
   font-size: 25px;
 }
 
-#celsius-link {
-  color: white;
-  text-decoration: none;
+a {
+  color: black;
 }
 
-#fahrenheit-link {
-  color: blue;
+.main .active {
+  color: white;
+cursor: default;
+text-decoration:none;
+}
+
+.main .active:hover {
+  text-decoration: none;
 }
 
 #weather-icon {

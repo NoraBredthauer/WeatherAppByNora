@@ -53,8 +53,17 @@ event.preventDefault();
 let temperatureElement = document.querySelector("#temp");
 let calculateFahrenheit = Math.round((celsiusTemperature*9)/5+32);
 temperatureElement.innerHTML = calculateFahrenheit;
+celsius.classList.remove("active");
+fahrenheit.classList.add("active");
 }
 
+function showCelsius(event) {
+event.preventDefault();
+let temperatureElement = document.querySelector("#temp");
+temperatureElement.innerHTML = celsiusTemperature;
+celsius.classList.add("active");
+fahrenheit.classList.remove("active");
+}
 
 
 
@@ -64,19 +73,10 @@ searchForm.addEventListener("submit", handleSubmit);
 let buttonCurrent = document.querySelector("#current-button");
 buttonCurrent.addEventListener("click", callNavigator);
 
-// Links to Fahrenheit and Celsius
-
-//function showCelsius(event) {
-//  event.preventDefault();
-//  let temperatureElement = document.querySelector("#temp");
-//  temperatureElement.innerHTML = "6°";
-//}
-//
-//let celsiusLink = document.querySelector("#celsius-link");
-//celsiusLink.addEventListener("click", showCelsius);
-//
-
 let celsiusTemperature=null;
+
+let celsius = document.querySelector("#celsius-link");
+celsius.addEventListener("click", showCelsius);
 
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", showFahrenheit);
