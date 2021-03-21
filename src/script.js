@@ -1,3 +1,22 @@
+
+// Update Function Timestamp
+function callUpdateTime(timestamp) {
+let currentTime = new Date(timestamp);
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+let day = days[currentTime.getDay()];
+let hour = currentTime.getHours();
+let minute = currentTime.getMinutes();
+return `${day}, ${hour}:${minute}`;
+}
+
 //Search-Form Functions
 
 function showTemp(response) {
@@ -13,7 +32,9 @@ function showTemp(response) {
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   let iconID=response.data.weather[0].icon;
   document.querySelector("#weather-icon").setAttribute("src", `http://openweathermap.org/img/wn/${iconID}@2x.png`)
-
+celsius.classList.add("active");
+fahrenheit.classList.remove("active");
+document.querySelector("#current-time").innerHTML = callUpdateTime(response.data.dt*1000);
 }
 
 function search(city) {
@@ -80,24 +101,5 @@ celsius.addEventListener("click", showCelsius);
 
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", showFahrenheit);
-
-let currentTime = new Date();
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-let day = days[currentTime.getDay()];
-let hour = currentTime.getHours();
-let minute = currentTime.getMinutes();
-let time = `${hour}:${minute}`;
-
-let showTime = document.querySelector("#current-time");
-showTime.innerHTML = `${day}, ${time} `;
 
 search("Nürnberg");
