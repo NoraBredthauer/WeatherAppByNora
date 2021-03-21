@@ -77,7 +77,7 @@ a {
 .main .active {
   color: white;
 cursor: default;
-text-decoration:none;
+text-decoration: none;
 }
 
 .main .active:hover {
@@ -89,11 +89,7 @@ text-decoration:none;
   position: relative;
 top: -28px;
 }
-.forecast {
-  border-top: white solid 1px;
-  border-bottom: white solid 1px;
-  font-size: 18px;
-}
+
 
 .further-information {
   text-align: left;
@@ -108,16 +104,24 @@ top: -28px;
   margin: 0;
 }
 
-.forecast {
+.forecastWrapper {
+  border-top: white solid 1px;
+  border-bottom: white solid 1px;
+  font-size: 18px;
   margin: 10px;
+  text-align:center;
 }
 
-.forecast-days {
+#forecastHours {
   font-size: 20px;
 }
 
-.forecast-icons {
-  font-size: 35px;
+#forecastIcons img {
+  width: 70px;
+}
+
+#forecastTemperatures {
+  font-size: 18px;
 }
 
 .update {

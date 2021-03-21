@@ -80,59 +80,19 @@
         </div>
       </div>
 
-      <div class="forecast">
-        <div class="row forecast-days">
-          <div class="col">Tomorrow</div>
-
-          <div class="col">Tuesday</div>
-
-          <div class="col">Wednesday</div>
-
-          <div class="col">Thursday</div>
-
-          <div class="col">Friday</div>
-        </div>
-
-        <div class="row forecast-icons">
-          <div class="col">
-            <i class="fas fa-cloud-sun-rain"></i>
-          </div>
-
-          <div class="col">
-            <i class="fas fa-cloud-sun-rain"></i>
-          </div>
-
-          <div class="col">
-            <i class="fas fa-cloud-sun-rain"></i>
-          </div>
-
-          <div class="col">
-            <i class="fas fa-cloud-sun-rain"></i>
-          </div>
-
-          <div class="col">
-            <i class="fas fa-cloud-sun-rain"></i>
-          </div>
-        </div>
-
-        <div class="row forecast-temp">
-          <div class="col">?°C/?°C</div>
-
-          <div class="col">?°C/?°C</div>
-
-          <div class="col">?°C/?°C</div>
-
-          <div class="col">?°C/?°C</div>
-
-          <div class="col">?°C/?°C</div>
-        </div>
+      <div class="forecastWrapper">
+        <div class="row" id="forecastHours"></div>
+      <div class="row" id="forecastIcons"></div>
+      <div class="row" id="forecastTemperatures"></div>
       </div>
+      
       <div class="row update">
         <div class="col">
           Last updated: <span id="current-time"></span> CET
         </div>
       </div>
     </div>
+
     <footer>
       <a
         href="https://github.com/NoraBredthauer/WeatherAppByNora"
