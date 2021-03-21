@@ -61,6 +61,9 @@ let forecastHours = document.querySelector("#forecastHours");
 let forecastIcons = document.querySelector("#forecastIcons");
 let forecastTemperatures = document.querySelector("#forecastTemperatures");
 let forecastData=null;
+forecastHours.innerHTML=null;
+forecastIcons.innerHTML=null;
+forecastTemperatures.innerHTML=null;
 
 for (let index = 0; index < 6; index++) {
   forecastData = response.data.list[index];
