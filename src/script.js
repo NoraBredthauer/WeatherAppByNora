@@ -13,8 +13,15 @@ let days = [
 ];
 let day = days[currentTime.getDay()];
 let hour = currentTime.getHours();
+if (hour<10) {
+  hour = `0${hour}`;
+};
 let minute = currentTime.getMinutes();
+if (minute<10) {
+  minute = `0${minute}`;
+};
 return `${day}, ${hour}:${minute}`;
+
 }
 
 //Search-Form Functions
