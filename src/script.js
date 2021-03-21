@@ -56,7 +56,6 @@ document.querySelector("#current-time").innerHTML = callUpdateTime(response.data
 }
 
 function displayForecast (response) {
-console.log(response.data);
 let forecastHours = document.querySelector("#forecastHours");
 let forecastIcons = document.querySelector("#forecastIcons");
 let forecastTemperatures = document.querySelector("#forecastTemperatures");
