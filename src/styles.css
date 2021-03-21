@@ -90,12 +90,12 @@ text-decoration: none;
 top: -28px;
 }
 
-
 .further-information {
   text-align: left;
   padding-left: 0px;
   margin-top: 35px;
 }
+
 .further-information::first-letter{
   text-transform: capitalize;
 }

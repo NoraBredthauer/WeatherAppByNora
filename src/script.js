@@ -49,7 +49,7 @@ function showTemp(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   let iconID=response.data.weather[0].icon;
-  document.querySelector("#weather-icon").setAttribute("src", `http://openweathermap.org/img/wn/${iconID}@2x.png`)
+  document.querySelector("#weather-icon").setAttribute("src", `https://openweathermap.org/img/wn/${iconID}@2x.png`)
 celsius.classList.add("active");
 fahrenheit.classList.remove("active");
 document.querySelector("#current-time").innerHTML = callUpdateTime(response.data.dt*1000);
@@ -72,7 +72,7 @@ for (let index = 0; index < 6; index++) {
   
   forecastIcons.innerHTML += 
   `<div class="col-2">
-  <img src="http://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png"/>
+  <img src="https://openweathermap.org/img/wn/${forecastData.weather[0].icon}@2x.png"/>
   </div>`;
   
   
