@@ -1,11 +1,9 @@
-//FAHRENHEIT NOT WORKING YET
-
-//Search-Form
+//Search-Form Functions
 
 function showTemp(response) {
-  document.querySelector("#temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemperature=  Math.round(
+    response.data.main.temp);
+  document.querySelector("#temp").innerHTML = celsiusTemperature;
   document.querySelector(
     "#City"
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
@@ -15,8 +13,8 @@ function showTemp(response) {
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   let iconID=response.data.weather[0].icon;
   document.querySelector("#weather-icon").setAttribute("src", `http://openweathermap.org/img/wn/${iconID}@2x.png`)
-}
 
+}
 
 function search(city) {
   let apiKey = "d0f8d1f9fa465cea19969bac3ea3aac3";
@@ -31,12 +29,8 @@ function handleSubmit(event) {
   search(city);
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
 
-search("Nürnberg");
-
-//Current-Button
+//Current-Button Functions
 
 function dataPosition(position) {
   let latitude = position.coords.latitude;
@@ -50,6 +44,22 @@ function callNavigator(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(dataPosition);
 }
+
+
+//Switch Units Functions 
+
+function showFahrenheit(event) {
+event.preventDefault();
+let temperatureElement = document.querySelector("#temp");
+let calculateFahrenheit = Math.round((celsiusTemperature*9)/5+32);
+temperatureElement.innerHTML = calculateFahrenheit;
+}
+
+
+
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
 
 let buttonCurrent = document.querySelector("#current-button");
 buttonCurrent.addEventListener("click", callNavigator);
@@ -65,18 +75,11 @@ buttonCurrent.addEventListener("click", callNavigator);
 //let celsiusLink = document.querySelector("#celsius-link");
 //celsiusLink.addEventListener("click", showCelsius);
 //
-//function showFahrenheit(event) {
-//  event.preventDefault();
-//  let temperatureElement = document.querySelector("#temp");
-//  let calculateFahrenheit = (tempCelsius*1.8+32);
-//  temperatureElement.innerHTML = `${calculateFahrenheit}`;
-//  console.log(temperatureElement);
-//}
-//
-//let fahrenheit = document.querySelector("#fahrenheit-link");
-//fahrenheit.addEventListener("click", showFahrenheit);
 
-// Update Time
+let celsiusTemperature=null;
+
+let fahrenheit = document.querySelector("#fahrenheit-link");
+fahrenheit.addEventListener("click", showFahrenheit);
 
 let currentTime = new Date();
 
@@ -96,3 +99,5 @@ let time = `${hour}:${minute}`;
 
 let showTime = document.querySelector("#current-time");
 showTime.innerHTML = `${day}, ${time} `;
+
+search("Nürnberg");
