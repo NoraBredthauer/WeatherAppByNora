@@ -42,7 +42,7 @@ function showTemp(response) {
     response.data.main.temp);
   document.querySelector("#temp").innerHTML = celsiusTemperature;
   document.querySelector(
-    "#City"
+    "#city"
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
@@ -78,7 +78,7 @@ for (let index = 0; index < 6; index++) {
   
   forecastTemperatures.innerHTML += 
   `        <div class="col-2">
-            ${Math.round(forecastData.main.temp_max)}° / ${Math.round(forecastData.main.temp_min)}°
+            ${Math.round(forecastData.main.temp_max)}°
           </div>`;
   }
 }
@@ -103,11 +103,13 @@ function handleSubmit(event) {
 //Current-Button Functions
 
 function dataPosition(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
   let apiKey = "d0f8d1f9fa465cea19969bac3ea3aac3";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
+ apiUrl=`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+ axios.get(apiUrl).then(displayForecast);
 }
 
 function callNavigator(event) {

@@ -48,7 +48,7 @@ input {
   border-color: black;
 }
 
-#City {
+#city {
   padding-left: 8px;
   margin: 20px auto 5px auto;
   text-align: left;
@@ -62,7 +62,7 @@ input {
 }
 
 .unit-element {
-  position: relative; 
+  position: relative;
   top: -41px;
 }
 
@@ -76,8 +76,8 @@ a {
 
 .main .active {
   color: white;
-cursor: default;
-text-decoration: none;
+  cursor: default;
+  text-decoration: none;
 }
 
 .main .active:hover {
@@ -87,7 +87,7 @@ text-decoration: none;
 #weather-icon {
   width: 80px;
   position: relative;
-top: -28px;
+  top: -28px;
 }
 
 .further-information {
@@ -96,7 +96,7 @@ top: -28px;
   margin-top: 35px;
 }
 
-.further-information::first-letter{
+.further-information::first-letter {
   text-transform: capitalize;
 }
 
@@ -109,19 +109,22 @@ top: -28px;
   border-bottom: white solid 1px;
   font-size: 18px;
   margin: 10px;
-  text-align:center;
+  text-align: center;
 }
 
 #forecastHours {
   font-size: 20px;
+  padding-top: 10px;
 }
 
 #forecastIcons img {
   width: 70px;
+  margin: -10px;
 }
 
 #forecastTemperatures {
-  font-size: 18px;
+  font-size: 20px;
+  padding-bottom: 10px;
 }
 
 .update {
