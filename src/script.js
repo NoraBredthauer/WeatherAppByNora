@@ -78,7 +78,7 @@ for (let index = 0; index < 6; index++) {
   
   forecastTemperatures.innerHTML += 
   `        <div class="col-2">
-            ${Math.round(forecastData.main.temp_max)}°
+            ${Math.round(forecastData.main.temp_max)}°C
           </div>`;
   }
 }
